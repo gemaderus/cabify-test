@@ -94,24 +94,6 @@ body {
   -o-font-feature-settings: "1" 1,"0" 0,"1" 1;
   font-feature-settings: "1" 1,"0" 0,"1" 1; }
 
-@media screen and (min-width: 36em) and (min-height: 36em) {
-  html {
-    font-size: calc(1em + .3333vmin); }
-  body {
-    line-height: 1.5; } }
-
-@media screen and (min-width: 80em) and (min-height: 64em) {
-  :root {
-    --scalar: 1.333; }
-  html {
-    font-size: 1.25rem; } }
-
-@media screen and (min-width: 105em) and (min-height: 67.5em) {
-  :root {
-    --scalar: 1.414; }
-  body {
-    max-width: 40em; } }
-
 .enhanced-typography > body {
   font-weight: var(--font-weight-regular);
   text-rendering: optimizeLegibility;
@@ -358,3 +340,19 @@ a {
     .footer-nav ul li {
       margin-right: 1.875em;
       flex-basis: auto; } }
+
+@media screen and (min-width: 36em) and (min-height: 36em) {
+  html {
+    font-size: calc(1em + .3333vmin); }
+  body {
+    line-height: 1.5; } }
+
+@media screen and (min-width: 80em) and (min-height: 64em) {
+  :root {
+    --scalar: 1.333; }
+  html {
+    font-size: 1.25rem; } }
+
+@media screen and (min-width: 105em) and (min-height: 67.5em) {
+  :root {
+    --scalar: 1.414; } }

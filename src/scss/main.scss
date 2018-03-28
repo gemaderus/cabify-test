@@ -87,7 +87,6 @@ body {
   background-color: var(--color-moradul-dark);
   color: var(--color-text-primary);
   margin: auto;
-  //padding: 1em 1rem 4.5rem;
   height: 100%;
 }
 
@@ -124,40 +123,6 @@ body {
   font-feature-settings: "1" 1,"0" 0,"1" 1;
 }
 
-// Small devices in landscape and above (576 × 576)
-@media screen and (min-width: 36em) and (min-height: 36em) {
-  html {
-    // Variable font size locking from a 16px minimum size to 20px at 1200px (our new grid size)
-    font-size: calc(1em + .3333vmin); // ((20-16)/1200) * 100
-  }
-
-  body {
-    //padding: 1em 1em 4.5em;
-    line-height: 1.5;
-  }
-}
-
-// Wide screens (1280 × 1024)
-@media screen and (min-width: 80em) and (min-height: 64em) {
-  :root {
-    --scalar: 1.333; // 3:4 – perfect fourth
-  }
-
-  html {
-    font-size: 1.25rem; // Locking at 20px maximum
-  }
-}
-
-// Ultra wide screens (1680 × 1080)
-@media screen and (min-width: 105em) and (min-height: 67.5em) {
-  :root {
-    --scalar: 1.414; // 1:√2 – augmented fourth
-  }
-
-  body {
-    max-width: 40em;
-  }
-}
 
 .enhanced-typography > body {
   font-weight: var(--font-weight-regular);
@@ -589,4 +554,40 @@ a {
       flex-basis: auto;
     }
   }
+}
+
+
+// Small devices in landscape and above (576 × 576)
+@media screen and (min-width: 36em) and (min-height: 36em) {
+  html {
+    // Variable font size locking from a 16px minimum size to 20px at 1200px (our new grid size)
+    font-size: calc(1em + .3333vmin); // ((20-16)/1200) * 100
+  }
+
+  body {
+    //padding: 1em 1em 4.5em;
+    line-height: 1.5;
+  }
+}
+
+// Wide screens (1280 × 1024)
+@media screen and (min-width: 80em) and (min-height: 64em) {
+  :root {
+    --scalar: 1.333; // 3:4 – perfect fourth
+  }
+
+  html {
+    font-size: 1.25rem; // Locking at 20px maximum
+  }
+}
+
+// Ultra wide screens (1680 × 1080)
+@media screen and (min-width: 105em) and (min-height: 67.5em) {
+  :root {
+    --scalar: 1.414; // 1:√2 – augmented fourth
+  }
+
+  // body {
+  //   max-width: 40em;
+  // }
 }
