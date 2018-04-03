@@ -10,46 +10,80 @@
   --font-size-x-large: calc(var(--scalar) * var(--scalar) * 1rem);
   --font-size-xx-large: calc(var(--scalar) * var(--scalar) * var(--scalar) * 1rem);
   --font-size-xxx-large: calc(var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) * 1rem);
-  --font-weight-light: 200;
   --font-weight-regular: 400;
   --font-weight-bold: 700;
-  --font-weight-headings: var(--font-weight-bold);
   --color-base-martinique: 238, 32%, 19%;
   --color-base-white: 100, 100%, 100%;
-  --color-moradul: hsl(257, 87%, 66%);
-  --color-moradul-light: hsl(260, 90%, 70%);
-  --color-moradul-dark: hsl(255, 85%, 61%);
+  --color-moradul: hsl(252, 100%, 66%);
+  --color-moradul-light: hsl(254, 100%, 69%);
+  --color-moradul-dark: hsl(250, 100%, 62%);
   --color-martinique: hsl(var(--color-base-martinique));
   --color-martinique-light: hsl(238, 31%, 24%);
   --color-martinique-dark: hsl(238, 35%, 14%);
   --color-azura: hsl(213, 91%, 56%);
-  --color-azura-light: hsl(209, 93%, 59%);
-  --color-azura-dark: hsl(216, 88%, 53%);
   --color-pink: hsl(336, 100%, 72%);
-  --color-pink-light: hsl(333, 100%, 76%);
-  --color-pink-dark: hsl(339, 100%, 68%);
   --color-blue-love: hsl(201, 100%, 73%);
-  --color-blue-love-light: hsl(199, 100%, 77%);
-  --color-blue-love-dark: hsl(203, 100%, 69%);
-  --color-mac-and-cheese: rgb(255, 188, 73);
-  --color-mac-and-cheese-light: rgba(255, 188, 73, .16);
-  --color-mac-and-cheese-dark: rgba(255, 188, 73, .16);
+  --color-mac-and-cheese: hsl(38, 100%, 64%);
   --color-shamrock: hsl(161, 77%, 81%);
-  --color-shamrock-light: hsl(162, 79%, 85%);
-  --color-shamrock-dark: hsl(160, 75%, 77%);
   --color-selago: hsl(240, 67%, 99%);
   --color-white: hsl(var(--color-base-white));
   --background-color: var(--color-selago);
-  --color-text-dark-primary: hsl(var(--color-base-martinique));
-  --color-text-dark-secondary:hsla(var(--color-base-martinique),.64 );
-  --color-text-light-primary: hsl(var(--color-base-white));
-  --color-text-light-secondary: hsla(var(--color-base-white), .72);
+  --color-text-positive-primary: hsl(var(--color-base-martinique));
+  --color-text-positive-secondary: hsla(var(--color-base-martinique), .64);
+  --color-text-positive-tertiary: hsla(var(--color-base-martinique), .40);
+  --color-text-negative-primary: hsl(var(--color-base-white));
+  --color-text-negative-secondary: hsla(var(--color-base-white), .72);
+  --color-text-negative-tertiary: hsla(var(--color-base-white), .48);
   --color-shadow-dark: hsla(var(--color-base-martinique), .24);
   --color-border-dark-primary: hsla(var(--color-base-martinique), .16);
   --color-border-dark-secondary: hsla(var(--color-base-martinique), .08);
   --color-shadow-light: hsla(var(--color-base-white), .24);
   --color-border-light-primary: hsla(var(--color-base-white), .16);
   --color-border-light-secondary: hsla(var(--color-base-white), .08); }
+
+.theme-positive {
+  --background-color: var(--color-selago);
+  --color-accent-primary: var(--color-moradul);
+  --color-accent-primary-light: var(--color-moradul-light);
+  --color-accent-primary-dark: var(--color-moradul-dark);
+  --color-text-primary: var(--color-text-positive-primary);
+  --color-text-secondary: var(--color-text-positive-secondary);
+  --color-text-tertiary: var(--color-text-positive-tertiary);
+  --color-shadow: var(--color-shadow-dark);
+  --color-border-primary: var(--color-border-dark-primary);
+  --color-border-secondary: var(--color-border-dark-secondary); }
+
+.theme-negative {
+  --color-accent-primary: var(--color-martinique);
+  --color-accent-primary-light: var(--color-martinique-light);
+  --color-accent-primary-dark: var(--color-martinique-dark);
+  --color-text-primary: var(--color-text-negative-primary);
+  --color-text-secondary: var(--color-text-negative-secondary);
+  --color-text-tertiary: var(--color-text-negative-tertiary);
+  --color-shadow: var(--color-shadow-light);
+  --color-border-primary: var(--color-border-light-primary);
+  --color-border-secondary: var(--color-border-light-secondary); }
+
+.audience-riders {
+  --color-accent-secondary: var(--color-pink); }
+
+.theme-negative.audience-riders {
+  --background-color: var(--color-moradul); }
+
+.audience-drivers {
+  --color-accent-secondary: var(--color-blue-love); }
+
+.theme-negative.audience-drivers {
+  --background-color: var(--color-azura); }
+
+.audience-business {
+  --color-accent-secondary: var(--color-shamrock); }
+
+.theme-positive.audience-business {
+  --background-color: var(--color-martinique);
+  --color-accent-primary: var(--color-moradul);
+  --color-accent-primary-light: var(--color-moradul-light);
+  --color-accent-primary-dark: var(--color-moradul-dark); }
 
 html {
   font-size: 1rem;
@@ -58,8 +92,8 @@ html {
 body {
   font-family: "Cabify Circular", Circular, "Avenir Next", sans-serif;
   line-height: 1.4;
-  font-weight: var(--font-weight-light);
-  background-color: var(--color-moradul-dark);
+  font-weight: var(--font-weight-regular);
+  background-color: var(--background-color);
   color: var(--color-text-primary);
   margin: auto;
   height: 100%; }
@@ -110,8 +144,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: var(--font-weight-headings);
-  color: var(--color-text-primary); }
+  font-weight: var(--font-weight-bold); }
 
 h1 {
   font-size: var(--font-size-xxx-large);
@@ -250,7 +283,7 @@ hr {
 
 .button.primary {
   background-color: var(--color-martinique);
-  color: var(--color-text-light-primary);
+  color: var(--color-text-negative-primary);
   text-shadow: 0 1px 0 var(--color-border-dark-secondary); }
 
 .button.primary .button-overlay {
@@ -258,7 +291,7 @@ hr {
   opacity: 1; }
 
 .button.primary:hover::before {
-  color: var(--color-text-light-primary); }
+  color: var(--color-text-negative-primary); }
 
 @media screen and (min-width: 576px) {
   .button + .button {
