@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 :root {
   --scalar: 1.250; // 4:5 – major third
   --baseline-grid: 4;
@@ -62,6 +58,45 @@
   --color-border-light-secondary: hsla(var(--color-base-white), .08);
 }
 
+@font-face {
+  font-family: "CabifyCircularWeb";
+  src: url(/fonts/CabifyCircularWeb-Book.eot);
+  src: url(/fonts/CabifyCircularWeb-Book.eot?#iefix) format("embedded-opentype"),url(/fonts/CabifyCircularWeb-Book.svg) format("svg");
+  font-weight: 400;
+  font-style: normal;
+  -ms-font-feature-settings: "1" 1,"0" 0,"1" 1;
+  -o-font-feature-settings: "1" 1,"0" 0,"1" 1;
+  font-feature-settings: "1" 1,"0" 0,"1" 1;
+}
+
+@font-face {
+  font-family: "CabifyCircularWeb";
+  src: url(/fonts/CabifyCircularWeb-Bold.eot);
+  src: url(/fonts/CabifyCircularWeb-Bold.eot?#iefix) format("embedded-opentype"),url(/fonts/CabifyCircularWeb-Bold.svg) format("svg");
+  font-weight: 600;
+  font-style: normal;
+  -ms-font-feature-settings: "1" 1,"0" 0,"1" 1;
+  -o-font-feature-settings: "1" 1,"0" 0,"1" 1;
+  font-feature-settings: "1" 1,"0" 0,"1" 1;
+}
+
+@font-face {
+  font-family: "CabifyCircularWeb";
+  src: url(/fonts/CabifyCircularWeb-Light.eot);
+  src: url(/fonts/CabifyCircularWeb-Light.eot?#iefix) format("embedded-opentype"),url(/fonts/CabifyCircularWeb-Light.svg) format("svg");
+  font-weight: 300;
+  font-style: normal;
+  -ms-font-feature-settings: "1" 1,"0" 0,"1" 1;
+  -o-font-feature-settings: "1" 1,"0" 0,"1" 1;
+  font-feature-settings: "1" 1,"0" 0,"1" 1;
+}
+
+* {
+  box-sizing: border-box;
+  letter-spacing: -.01em;
+}
+
+// Themes
 .theme-positive {
   --background-color: var(--color-selago);
 
@@ -133,52 +168,10 @@ body {
   color: var(--color-text-primary);
   margin: auto;
   height: 100%;
-}
-
-@font-face {
-  font-family: "CabifyCircularWeb";
-  src: url(/fonts/CabifyCircularWeb-Book.eot);
-  src: url(/fonts/CabifyCircularWeb-Book.eot?#iefix) format("embedded-opentype"),url(/fonts/CabifyCircularWeb-Book.svg) format("svg");
-  font-weight: 400;
-  font-style: normal;
-  -ms-font-feature-settings: "1" 1,"0" 0,"1" 1;
-  -o-font-feature-settings: "1" 1,"0" 0,"1" 1;
-  font-feature-settings: "1" 1,"0" 0,"1" 1;
-}
-
-@font-face {
-  font-family: "CabifyCircularWeb";
-  src: url(/fonts/CabifyCircularWeb-Bold.eot);
-  src: url(/fonts/CabifyCircularWeb-Bold.eot?#iefix) format("embedded-opentype"),url(/fonts/CabifyCircularWeb-Bold.svg) format("svg");
-  font-weight: 600;
-  font-style: normal;
-  -ms-font-feature-settings: "1" 1,"0" 0,"1" 1;
-  -o-font-feature-settings: "1" 1,"0" 0,"1" 1;
-  font-feature-settings: "1" 1,"0" 0,"1" 1;
-}
-
-@font-face {
-  font-family: "CabifyCircularWeb";
-  src: url(/fonts/CabifyCircularWeb-Light.eot);
-  src: url(/fonts/CabifyCircularWeb-Light.eot?#iefix) format("embedded-opentype"),url(/fonts/CabifyCircularWeb-Light.svg) format("svg");
-  font-weight: 300;
-  font-style: normal;
-  -ms-font-feature-settings: "1" 1,"0" 0,"1" 1;
-  -o-font-feature-settings: "1" 1,"0" 0,"1" 1;
-  font-feature-settings: "1" 1,"0" 0,"1" 1;
-}
-
-
-.enhanced-typography > body {
-  font-weight: var(--font-weight-regular);
   text-rendering: optimizeLegibility;
   font-feature-settings: 'kern' 1,'onum' 1,'liga' 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.enhanced-typography * {
-  letter-spacing: -.01em;
 }
 
 h1,
@@ -220,8 +213,8 @@ h5 {
   line-height: 1.3;
 }
 
-.enhanced-typography h6,
-.enhanced-typography .caption {
+h6,
+.caption {
   letter-spacing: .02em;
 }
 
@@ -604,12 +597,11 @@ a {
 // Small devices in landscape and above (576 × 576)
 @media screen and (min-width: 36em) and (min-height: 36em) {
   html {
-    // Variable font size locking from a 16px minimum size to 20px at 1200px (our new grid size)
-    font-size: calc(1em + .3333vmin); // ((20-16)/1200) * 100
+    // Variable font size locking from a 16px minimum size to 20px at 1280px (our new grid size)
+    font-size: calc(1em + .3125vmin); // ((20-16)/1280) * 100
   }
 
   body {
-    //padding: 1em 1em 4.5em;
     line-height: 1.5;
   }
 }
@@ -630,8 +622,4 @@ a {
   :root {
     --scalar: 1.414; // 1:√2 – augmented fourth
   }
-
-  // body {
-  //   max-width: 40em;
-  // }
 }
