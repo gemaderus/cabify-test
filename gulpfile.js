@@ -6,6 +6,8 @@ var fileinclude = require('gulp-file-include');
 var cachebust = require('gulp-cache-bust');
 var plumber = require('gulp-plumber');
 var gutil = require('gulp-util');
+var concat = require('gulp-concat');
+var sourcemaps = require('gulp-sourcemaps');
 
 var src = {
     scss: 'src/scss/*.scss',
@@ -13,7 +15,7 @@ var src = {
     html: 'src/*.html',
     index: 'app/*.html',
     js: 'src/js/*.js',
-    js: 'app/*.js'
+    js: 'app/js/*.js'
 };
 
 var errorMsg = '\x1b[41mError\x1b[0m';
@@ -40,12 +42,11 @@ gulp.task('html-includes', function () {
         .pipe(gulp.dest('app'));
 });
 
-// Static Server + watching scss/html files
+// Static Server + watching scss/html/js files
 gulp.task('serve', ['html-includes', 'sass'], function() {
     browserSync.init({
         server: './app'
     });
-
     gulp.watch(src.scss, ['sass']);
     gulp.watch(src.html, ['html-includes']);
     gulp.watch(src.index).on('change', reload);
@@ -60,4 +61,12 @@ gulp.task('sass', function() {
         .pipe(reload({ stream: true }));
 });
 
-gulp.task('default', ['serve']);
+gulp.task('js', function(){
+  return gulp.src('src.js/*.js')
+    .pipe(sourcemaps.init())
+    .pipe(concat('app.min.js'))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('build/js'))
+});
+
+gulp.task('default', ['serve'], ['js']);
