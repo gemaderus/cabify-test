@@ -11,7 +11,9 @@ var src = {
     scss: 'src/scss/*.scss',
     css: 'app/css',
     html: 'src/*.html',
-    index: 'app/*.html'
+    index: 'app/*.html',
+    js: 'src/js/*.js',
+    js: 'app/*.js'
 };
 
 var errorMsg = '\x1b[41mError\x1b[0m';
