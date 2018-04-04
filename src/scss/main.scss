@@ -1,12 +1,12 @@
 @import "../../node_modules/@cabify-dev/theme/styles/utils/global_vars";
 @import "../../node_modules/@cabify-dev/theme/styles/utils/vars";
+@import "../../node_modules/@cabify-dev/theme/styles/base/reset";
 @import "../../node_modules/@cabify-dev/theme/styles/utils/helpers";
 @import "../../node_modules/@cabify-dev/theme/styles/layout/grid";
 @import "../../node_modules/@cabify-dev/theme/styles/components/button";
 @import "../../node_modules/@cabify-dev/theme/styles/components/formField-states";
 @import "../../node_modules/@cabify-dev/theme/styles/components/formField-phone";
 @import "../../node_modules/@cabify-dev/theme/styles/components/formField";
-
 
 :root {
   --scalar: 1.250; // 4:5 – major third
@@ -540,6 +540,7 @@ a {
 }
 
 .header {
+  padding: 2em 0;
   justify-content: space-between;
   font-size: var(--font-size-small);
   flex-wrap: wrap;
@@ -585,7 +586,13 @@ a {
   }
 }
 
+.input:focus-within {
+  //border-color: #698DFF; this color happens on focus but it's not appreciated because of the background. This style is affected by input:hover of theme.
+  border-color: red;
+}
+
 .footer {
+  padding: 2em 0;
   @media screen and (min-width: 48em) {
     display: flex;
     align-items: center;
