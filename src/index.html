@@ -10,12 +10,46 @@
     <div class="container">
       @@include('./partials/header.html')
       <div class="hero">
-        <h1>Sigue tu propio camino</h1>
-        <p>Tendrás la ciudad a tu alcance con tan solo pulsar un botón</p>
-        <div class="buttonHolder">
-          <a href="#" class="button">Pide tu Cabify</a>
-          <a href="#" class="button primary">Descarga la app</a>
+        <div class="hero-action">
+          <h1>Sigue tu propio camino</h1>
+          <p>Tendrás la ciudad a tu alcance con tan solo pulsar un botón</p>
+          <div class="buttonHolder">
+            <a href="#" class="buttonReset button-white">Pide tu Cabify</a>
+            <a href="#" class="buttonReset primary">Descarga la app</a>
+          </div>
         </div>
+        <form action="" class="form-register">
+          <h2>¿Quieres ser conductor?</h2>
+          <div class="crud-list">
+            <div class="formField">
+              <div class="formField-input">
+                <div class="input active">
+                  <label for="name">Nombre</label>
+                  <input type="text" name="name" placeholder="" value="Gema" id="name" required=""><span class="input-reset"></span>
+                </div>
+              </div>
+            </div>
+            <div class="formField">
+              <div class="formField-input">
+                <div class="input active">
+                  <label for="surname">Apellidos</label>
+                  <input type="text" name="surname" placeholder="" value="de Rus" id="surname">
+                  <span class="input-reset"></span>
+                </div>
+              </div>
+            </div>
+            <div class="formField ">
+              <div class="formField-input">
+                <div class="input active">
+                  <label for="phone_num">Número de teléfono</label>
+                  <input type="text" name="phone_num" placeholder="" value="647715220" id="phone_num">
+                  <span class="input-reset"></span>
+                </div>
+              </div>
+            </div>
+            <button id="" type="submit" class="button button-info"><span> Guardar </span></button>
+          </div>
+        </form>
       </div>
       @@include('./partials/footer.html')
     </div>
