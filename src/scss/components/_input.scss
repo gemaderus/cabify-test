@@ -1,0 +1,22 @@
+/* Inputs */
+
+.input:focus-within {
+  border-color: red;
+  //border-color: $focuscolor;
+}
+
+// &.active label {
+//   color: $basecolor-lighter;
+//   transform: translateY(-$spacing);
+//   transform-origin: 0 0;
+// }
+
+.input:focus-within label,
+input:not(:placeholder-shown) + label {
+  color: $basecolor-lighter;
+  transform: translateY(-$spacing);
+  transform-origin: 0 0;
+}
+
+
+/* based https://stackoverflow.com/questions/16952526/detect-if-an-input-has-text-in-it-using-css-on-a-page-i-am-visiting-and-do-no*/

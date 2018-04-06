@@ -1,0 +1,15 @@
+/* Navigation */
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.navLink {
+  color: hsla(100, 100%, 100%, .72);
+
+  &:active, &:hover {
+    color: var(--color-white);
+  }
+}
+

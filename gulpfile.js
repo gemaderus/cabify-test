@@ -12,7 +12,7 @@ const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 
 const src = {
-  scss: 'src/scss/*.scss',
+  scss: 'src/scss/**/*.scss',
   css: 'app/css',
   js: 'src/js/*.js',
   html: 'src/*.html',

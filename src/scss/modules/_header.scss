@@ -1,0 +1,21 @@
+/* Header */
+
+.header {
+  padding: 2em 0;
+  justify-content: space-between;
+  font-size: var(--font-size-small);
+  flex-wrap: wrap;
+
+  nav li {
+    margin-right: 1.875em;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}

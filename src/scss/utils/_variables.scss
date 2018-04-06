@@ -1,0 +1,121 @@
+/* Variables */
+
+:root {
+  --scalar: 1.250; // 4:5 – major third
+  --baseline-grid: 4;
+
+  --font-size-small: calc(1 / var(--scalar) * 1rem);
+  --font-size-regular: 1rem;
+  --font-size-large: calc(var(--scalar) * 1rem);
+  --font-size-x-large: calc(var(--scalar) * var(--scalar) * 1rem);
+  --font-size-xx-large: calc(var(--scalar) * var(--scalar) * var(--scalar) * 1rem);
+  --font-size-xxx-large: calc(var(--scalar) * var(--scalar) * var(--scalar) * var(--scalar) * 1rem);
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  // Primary colors
+  --color-base-martinique: 238, 32%, 19%;
+  --color-base-white: 100, 100%, 100%;
+
+  --color-moradul: hsl(252, 100%, 66%);
+  --color-moradul-light: hsl(254, 100%, 69%);
+  --color-moradul-dark: hsl(250, 100%, 62%);
+
+  --color-martinique: hsl(var(--color-base-martinique));
+  --color-martinique-light: hsl(238, 31%, 24%);
+  --color-martinique-dark: hsl(238, 35%, 14%);
+
+  --color-azura: hsl(213, 91%, 56%);
+
+  // Secondary colors
+  --color-pink: hsl(336, 100%, 72%);
+  --color-blue-love: hsl(201, 100%, 73%);
+  --color-mac-and-cheese: hsl(38, 100%, 64%);
+  --color-shamrock: hsl(161, 77%, 81%);
+
+  // Light background colors
+  --color-selago: hsl(240, 67%, 99%);
+  --color-white: hsl(var(--color-base-white));
+
+  //Setting a default background color
+  --background-color: var(--color-selago);
+
+  // Text color
+  --color-text-positive-primary: hsl(var(--color-base-martinique));
+  --color-text-positive-secondary: hsla(var(--color-base-martinique), .64);
+  --color-text-positive-tertiary: hsla(var(--color-base-martinique), .40);
+
+  --color-text-negative-primary: hsl(var(--color-base-white));
+  --color-text-negative-secondary: hsla(var(--color-base-white), .72);
+  --color-text-negative-tertiary: hsla(var(--color-base-white), .48);
+
+  // UI detail color
+  --color-shadow-dark: hsla(var(--color-base-martinique), .24);
+  --color-border-dark-primary: hsla(var(--color-base-martinique), .16);
+  --color-border-dark-secondary: hsla(var(--color-base-martinique), .08);
+
+  --color-shadow-light: hsla(var(--color-base-white), .24);
+  --color-border-light-primary: hsla(var(--color-base-white), .16);
+  --color-border-light-secondary: hsla(var(--color-base-white), .08);
+}
+
+// Themes
+.theme-positive {
+  --background-color: var(--color-selago);
+
+  --color-accent-primary: var(--color-moradul);
+  --color-accent-primary-light: var(--color-moradul-light);
+  --color-accent-primary-dark: var(--color-moradul-dark);
+
+  --color-text-primary: var(--color-text-positive-primary);
+  --color-text-secondary: var(--color-text-positive-secondary);
+  --color-text-tertiary: var(--color-text-positive-tertiary);
+
+  --color-shadow: var(--color-shadow-dark);
+  --color-border-primary: var(--color-border-dark-primary);
+  --color-border-secondary: var(--color-border-dark-secondary);
+}
+
+.theme-negative {
+  --color-accent-primary: var(--color-martinique);
+  --color-accent-primary-light: var(--color-martinique-light);
+  --color-accent-primary-dark: var(--color-martinique-dark);
+
+  --color-text-primary: var(--color-text-negative-primary);
+  --color-text-secondary: var(--color-text-negative-secondary);
+  --color-text-tertiary: var(--color-text-negative-tertiary);
+
+  --color-shadow: var(--color-shadow-light);
+  --color-border-primary: var(--color-border-light-primary);
+  --color-border-secondary: var(--color-border-light-secondary);
+}
+
+.audience-riders {
+  --color-accent-secondary: var(--color-pink);
+}
+
+.theme-negative.audience-riders {
+  --background-color: var(--color-moradul);
+}
+
+.audience-drivers {
+  --color-accent-secondary: var(--color-blue-love);
+}
+
+.theme-negative.audience-drivers {
+  --background-color: var(--color-azura);
+}
+
+.audience-business {
+  --color-accent-secondary: var(--color-shamrock);
+}
+
+.theme-negative.audience-business {
+  --background-color: var(--color-martinique);
+
+  --color-accent-primary: var(--color-moradul);
+  --color-accent-primary-light: var(--color-moradul-light);
+  --color-accent-primary-dark: var(--color-moradul-dark);
+}
+
