@@ -1,6 +1,6 @@
 .DS_Store
 .sass-cache
 node_modules/
-app/
+app
 npm-debug.log
 .publish
