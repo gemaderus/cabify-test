@@ -32,6 +32,7 @@ const onError = err => {
   this.emit('end');
 };
 
+
 gulp.task('html-includes', () => {
   return gulp
     .src(['src/*.html'])
@@ -55,6 +56,7 @@ gulp.task('html-includes', () => {
 gulp.task('js', () =>
   gulp
     .src(src.js)
+    .pipe(plumber({ errorHandler: onError }))
     .pipe(sourcemaps.init())
     .pipe(
       babel({
